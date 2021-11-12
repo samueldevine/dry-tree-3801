@@ -28,7 +28,7 @@ RSpec.describe 'The Hospital Show Page' do
     end
 
     it "the number of doctors that work at this hospital" do
-      expect(page).to have_content "Number of Doctors at this Hospital: #{@hospital.doctors.count}"
+      expect(page).to have_content "Number of doctors at this hospital: #{@hospital.doctors.count}"
     end
 
     it "a unique list of universities that this hospital's doctors attended" do
