@@ -1,0 +1,8 @@
+<h1>The Patients Index Page</h1><hr>
+
+<h3>All Patients:</h3>
+<ul>
+<% @patients.each do |patient| %>
+  <li><%= patient.name %> (Age <%= patient.age %>)</li>
+<% end %>
+</ul>
