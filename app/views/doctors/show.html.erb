@@ -11,7 +11,7 @@
   <% @doctor.patients.each do |patient| %>
     <li>
     <%= patient.name %>
-    <%= form_with url: doctor_patient_path(@doctor, patient), method: :delete do |f| %>
+    <%= form_with url: doctor_patient_path(@doctor, patient), method: :delete, local: true do |f| %>
       <%= f.submit "Remove #{patient.name} from caseload" %>
     <% end %>
     </li><br>
