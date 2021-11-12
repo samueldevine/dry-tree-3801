@@ -1,0 +1,13 @@
+<h1>Hospital Show Page</h1><hr>
+
+<h3><%= @hospital.name %></h3>
+<p>Number of doctors at this hospital: <%= @hospital.doctors_count %></p>
+
+<div id='universities'>
+  <h5>This hospital has at least one doctor that attended each of the following universities:</h5>
+  <ul>
+  <% @hospital.doctor_universities.each do |university| %>
+    <li><%= university.name %></li>
+  <% end %>
+  </ul>
+</div>
