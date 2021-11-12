@@ -9,7 +9,12 @@
   <h5>Current Patients</h5>
   <ul>
   <% @doctor.patients.each do |patient| %>
-    <li><%= patient.name %></li>
+    <li>
+    <%= patient.name %>
+    <%= form_with url: doctor_patient_path(@doctor, patient), method: :delete do |f| %>
+      <%= f.submit "Remove #{patient.name} from caseload" %>
+    <% end %>
+    </li><br>
   <% end %>
   </ul>
 </div>
